@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal | www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Responsiive Admin Dashboard | CodingLab </title>
+    <link rel="stylesheet" href="/css/productstats.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/admin.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   </head>
+   <style>
+      
+      .heading{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .heading .price{
+        font-size: 20px;
+        font-weight: bold;
+      }
+      .overview-boxes .box{
+        height: 120px;
+      }
+      .heading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .details{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .image-name{
+        display: flex;
+        width: 400px;
+      }
+      .heading .image-name{
+        width: 400px;
+      }
+   </style>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <span class="logo_name"><span style="color:rgb(217, 153, 84);">B</span><span style="color:rgb(80, 207, 80)">B</span></span>
+    </div>
+    <ul class="nav-links">
+      <li>
+          <a href="/user/dashboard?userid=<%= encodeURIComponent(user._id) %>" >
+              <i class='bx bx-grid-alt'></i>
+              <span class="links_name">Dashboard</span>
+          </a>
+      </li>
+
+      <li>
+          <a href="/user/orders?userid=<%= encodeURIComponent(user._id) %>" >
+              <i class="fa-solid fa-truck-fast"></i>
+              <span class="links_name">My Orders</span>
+          </a>
+      </li>
+
+      <li>
+          <a href="/user/addproduct?userid=<%= encodeURIComponent(user._id) %>" > 
+            <i class="fa-solid fa-industry"></i>
+              <span class="links_name">Produce Item</span>
+          </a>
+      </li>
+
+      <li>
+        <a href="/user/producer?userid=<%= encodeURIComponent(user._id) %>" class="active"> 
+          <i class="fa-solid fa-signal"></i>
+            <span class="links_name">Product Stats</span>
+        </a>
+    </li>
+
+    <li>
+      <a href="/user/appointments?userid=<%= encodeURIComponent(user._id) %>">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">appointments</span>
+      </a>
+  </li>
+
+      <li>
+        <a href="/producer/notifications?userid=<%= encodeURIComponent(user._id) %>" > 
+            <i class="fa-solid fa-bell"></i>
+            <span class="links_name">Notifications</span>
+        </a>
+    </li>
+
+      <li>
+          <a href="/user/settings?userid=<%= encodeURIComponent(user._id) %>">
+              <i class="fa-solid fa-gear"></i>
+              <span class="links_name">Settings</span>
+          </a>
+      </li>
+          
+      <li class="log_out">
+          <a href="/login">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">logout</span>
+          </a>
+      </li>
+  </ul>
+    </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+
+      <div class="profile-details">
+        <span class="admin_name"><%= user.name %></span>
+
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Orders</div>
+            <div class="number"><% let total = 0; %>
+              <% for (const pro of resultArray) { %>
+                  <% total += pro.userCount; %>
+              <% } %>
+              <%= total %></div>
+          </div>
+          <i class='bx bx-cart-alt cart'></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total Sales</div>
+            <div class="number">
+              <% let totalPrice = 0 %>
+              <% for (const pro of resultArray) { %>
+                  <% totalPrice += pro.productInfo.price * pro.userCount %>
+              <% } %>
+
+              $<%= totalPrice.toFixed(2) %>
+
+            </div>
+          </div>
+          <i class='bx bxs-cart-add cart two' ></i>
+        </div>
+
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Total customers bought</div>
+            <div class="number"><% let totalCus = 0; %>
+              <% for (const pro in resultArray) { %>
+                  <% totalCus += 1; %>
+              <% } %>
+
+              <%= totalCus %></div>
+          </div>
+          <i class='bx bxs-cart-download cart four' ></i>
+        </div>
+      </div>
+
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">All Sales</div>
+          <div class="sales-details">
+            <ul class="details heading">
+            
+              <li class="name">Product</li>
+              <li class="image">Image</li>
+              <li class="count">Count</li>
+              <li class="price">Total Income</li>
+            </ul>
+
+
+            <% resultArray.forEach(pro => { %>
+            <ul class="details">
+
+                  <li class="customer"><a href="#"><%= pro.productInfo.name %></a></li>
+                  <li class="image"><img src="<%= pro.productInfo.imgUrl %>" alt="" height="50px" width="50px"></li>
+             
+              <li class="count"><a href="#"><%= pro.userCount %></a></li>
+              
+              <li class="price"><a href="#">$<%= pro.productInfo.price * pro.userCount %></a></li>
+            </ul>
+            <% }); %>
+          </div>
+        </div>
+        <div class="top-sales box">
+          <div class="title">Top Liked Products</div>
+          <ul class="top-sales-details">
+            <% likedResultArray.forEach(pro => { %>
+            <li>
+            <a href="#">
+              <img src=<%= pro.productInfo.imgUrl %> alt="">
+              <span class="product"><%= pro.productInfo.name %></span>
+            </a>
+            <span class="prices likes"><%= pro.userCount %> likes</span>
+            <span class="price">$<%= pro.productInfo.price %></span>
+          </li>
+          <% }); %>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script src="/admin.js"></script>
+
+</body>
+</html>

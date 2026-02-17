@@ -1,0 +1,72 @@
+Cloning ecommerce repo to temp dir...
+Cloning into '/var/folders/mr/nd8gbmc93516sr_spppcqk6m0000gn/T/ecommerce-delete-1771344660998'...
+Deleting 23 remote branch(es): HEAD -> origin/main, hemanth.varma_KAN-107_V01, hemanth.varma_KAN-108_V01, hemanth.varma_KAN-113_V01, hemanth.varma_KAN-116_V01, hemanth.varma_KAN-117_V01, hemanth.varma_KAN-123_V01, hemanth.varma_KAN-80_V01, hemanth.varma_KAN-84_V01, hemanth.varma_KAN-91_V01, hemanth.varma_KAN-96_V01, hemanth.varma_KAN-98_V01, saiganesh.gupta_KAN-100_V01, saiganesh.gupta_KAN-103_V01, saiganesh.gupta_KAN-104_V01, saiganesh.gupta_KAN-106_V01, saiganesh.gupta_KAN-109_V01, saiganesh.gupta_KAN-114_V01, saiganesh.gupta_KAN-115_V01, saiganesh.gupta_KAN-119_V01, saiganesh.gupta_KAN-122_V01, saiganesh.gupta_KAN-82_V01, saiganesh.gupta_KAN-94_V01
+/bin/sh: origin/main: No such file or directory
+  Failed to delete HEAD -> origin/main: Command failed: git push origin --delete HEAD -> origin/main
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-107_V01
+  Deleted hemanth.varma_KAN-107_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-108_V01
+  Deleted hemanth.varma_KAN-108_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-113_V01
+  Deleted hemanth.varma_KAN-113_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-116_V01
+  Deleted hemanth.varma_KAN-116_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-117_V01
+  Deleted hemanth.varma_KAN-117_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-123_V01
+  Deleted hemanth.varma_KAN-123_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-80_V01
+  Deleted hemanth.varma_KAN-80_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-84_V01
+  Deleted hemanth.varma_KAN-84_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-91_V01
+  Deleted hemanth.varma_KAN-91_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-96_V01
+  Deleted hemanth.varma_KAN-96_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         hemanth.varma_KAN-98_V01
+  Deleted hemanth.varma_KAN-98_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-100_V01
+  Deleted saiganesh.gupta_KAN-100_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-103_V01
+  Deleted saiganesh.gupta_KAN-103_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-104_V01
+  Deleted saiganesh.gupta_KAN-104_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-106_V01
+  Deleted saiganesh.gupta_KAN-106_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-109_V01
+  Deleted saiganesh.gupta_KAN-109_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-114_V01
+  Deleted saiganesh.gupta_KAN-114_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-115_V01
+  Deleted saiganesh.gupta_KAN-115_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-119_V01
+  Deleted saiganesh.gupta_KAN-119_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-122_V01
+  Deleted saiganesh.gupta_KAN-122_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-82_V01
+  Deleted saiganesh.gupta_KAN-82_V01
+To https://github.com/Sumble-Guys/ecommerce.git
+ - [deleted]         saiganesh.gupta_KAN-94_V01
+  Deleted saiganesh.gupta_KAN-94_V01
+Done.
