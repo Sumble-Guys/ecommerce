@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        section img{
+            height: 150px;
+            width: 150px;
+            animation: rotate 2s linear infinite;
+            
+        }
+        section div{
+            font-weight: bold;
+            font-family: sans-serif;
+            font-size: 25px;
+            margin-top: 20px;
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        footer{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        footer img{
+            height: 80px;
+            width:220px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img src="./images/bharatbaazarlogo.png" alt="">
+        <div>LOADING....</div>
+    </section>
+    <input type="hidden" id="userid" value="<%= user._id %>">
+    <footer>
+        <img src="./images/bharatbaazartext.png" alt="">
+    </footer>
+
+    <script>
+        const userid = document.getElementById("userid").value;
+        setTimeout(function() {
+            window.location.href = `/ecommerce?userid=${userid}`;
+        }, 2000);
+    </script>
+</body>
+</html>
